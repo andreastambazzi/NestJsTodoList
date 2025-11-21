@@ -51,7 +51,7 @@
 						"header": [],
 						"body": {
 							"mode": "raw",
-							"raw": "{\n  \"username\": \"SuperFrizzo1\",\n  \"password\": \"ApritiSesamo1!\",\n  \"firstname\": \"Ciccio\",\n  \"lastname\": \"Frizzo\",\n  \"email\": \"super.frizzo1@gmail.com\"\n}",
+							"raw": "{\n  \"username\": \"SuperFrizzo2\",\n  \"password\": \"ApritiSesamo1!\",\n  \"firstname\": \"Ciccio\",\n  \"lastname\": \"Frizzo\",\n  \"email\": \"super.frizzo2@gmail.com\"\n}",
 							"options": {
 								"raw": {
 									"language": "json"
@@ -141,16 +141,21 @@
 				{
 					"name": "deleteUserProfile",
 					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": [
+								{
+									"key": "token",
+									"value": "{{authToken}}",
+									"type": "string"
+								}
+							]
+						},
 						"method": "DELETE",
 						"header": [
 							{
 								"key": "Content-Type",
 								"value": "application/json",
-								"type": "text"
-							},
-							{
-								"key": "Authorization",
-								"value": "Bearer {{authToken}}",
 								"type": "text"
 							}
 						],
