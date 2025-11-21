@@ -66,15 +66,15 @@ export class AppConfig {
         if (process.env.NODE_ENV && process.env.NODE_ENV == AppConfig.ENV_DEV || process.env.NODE_ENV == AppConfig.ENV_TEST) {
             console.info("... DEV !");
             
-            dotenv.config({ path: "./src/config/config_dev.env" });
+            dotenv.config({ path: "./config/config_dev.env" });
         }
         else if (process.env.NODE_ENV && process.env.NODE_ENV == AppConfig.ENV_STAG ) {
             console.info("... STAG !");
-            dotenv.config({ path: "./src/config/config_stag.env" });
+            dotenv.config({ path: "./config/config_stag.env" });
         }
         else {
             console.info("... PROD !");
-            dotenv.config({ path: "./src/config/config_prod.env" });
+            dotenv.config({ path: "./config/config_prod.env" });
         }
     }
 

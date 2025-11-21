@@ -7,7 +7,7 @@
   "license": "UNLICENSED",
   "scripts": {
     "clean" : "rm -r node_modules package-lock.json; npm install",
-    "build": "nest build",
+    "build": "rm -r ./dist; nest build",
     "format": "prettier --write \"src/**/*.ts\" \"test/**/*.ts\"",
     "start": "export NODE_ENV=development; nest start",
     "start:dev": "export NODE_ENV=development; nest start --watch",

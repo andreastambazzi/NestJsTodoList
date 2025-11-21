@@ -1,0 +1,22 @@
+name: todo-list
+
+services:
+  nestjs:
+    build: .
+    container_name: cont-nestjs
+    restart: always
+    ports:
+      - "3000:3000"
+    environment:
+      NODE_ENV: 'production'
+      GENERIC_TIMEZONE: "Europe/Rome"
+      TZ: "Europe/Rome"
+      LANG: "it_IT.UTF-8"
+    #volumes:      
+      #- nestjsvolume:/opt/app/config/
+    extra_hosts:
+      - "host.docker.internal:host-gateway"
+
+volumes:
+  nestjsvolume:
+    driver: local
